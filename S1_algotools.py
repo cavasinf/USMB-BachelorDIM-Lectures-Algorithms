@@ -133,7 +133,7 @@ def sort_bubble(listIn):
     
 
 
-input_list=[1,2,3,4,-7]
+input_list=[1,3,9,4,-7]
 
 average_above_zero(input_list)
 max_value(input_list)
