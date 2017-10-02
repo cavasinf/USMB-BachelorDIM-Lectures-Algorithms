@@ -5,8 +5,11 @@ Created on Thu Sep 07 13:38:57 2017
 @author: PC-PRO-FLORIAN
 """
 import numpy
+from random import randint
 
 def average_above_zero(list):
+    
+    print("===== AVERAGE ZERO =====")
 
     som=0
     n=0
@@ -23,6 +26,7 @@ def average_above_zero(list):
     print('Positive elements average is '+str(average))
     
 def max_value(list):
+    print("===== Max Value =====")
     
     maxValue = -99999999999999999999
     for item in list:
@@ -53,6 +57,7 @@ myMat[4:7,7:9]=numpy.ones([3,2])
 
 def roi_bbox(myMat):
     
+    print("===== BBox =====")
     print(myMat)
     
     xMin=10
@@ -80,12 +85,63 @@ def roi_bbox(myMat):
     result= ["["+str(xMin)+","+str(yMin)+"]","["+str(xMax)+","+str(yMin)+"]","["+str(xMin)+","+str(yMax)+"]","["+str(xMax)+","+str(yMax)+"]"]
     print(str(result))
     
+def random_fill_sparse(Table,vfill):
+   print(vfill)
+
+def remove_whitespace(stringToParse):
+    print("===== Remove white space =====")
+    """for i in range(len(stringToParse)):
+        if stringToParse[i] == ' ':
+            stringToParse[i].remove()
+    """
+    stringToParse = stringToParse.replace(' ','')
+    print(stringToParse)
     
+def shuffle(listToSelectRandom):
+    print("===== Shuffle =====")
+    sizeOfListe = len(listToSelectRandom)
+    print(listToSelectRandom[randint(0,sizeOfListe)-1])
+    
+def dice_game(numberOfPlayer):
+    print("===== THE DICE GAME =====")
+    playerWhoWin = 0
+    onePlayerWin = False
+    maxTurn = numberOfPlayer
+    actualTurn = 1
+    numberOfTurn = 0
+    scoreList = [0] * numberOfPlayer
+    while onePlayerWin == False :
+        randomDice = randint(1,6)
+        if randomDice > 1:
+            scoreList[actualTurn-1] = scoreList[actualTurn-1]+randomDice
+        if actualTurn < maxTurn:
+            actualTurn = actualTurn +1
+        else:
+            actualTurn = 1
+        numberOfTurn = numberOfTurn +1
+        if scoreList[actualTurn-1]> 99:
+            onePlayerWin = True
+            playerWhoWin = actualTurn
+    print ("The Player number "+str(playerWhoWin)+" win with "+str(scoreList[playerWhoWin-1])+" points")
+    print(scoreList)
+        
+def sort_selective(listIn):
+    print("=====SORT SELECTIVE =====")
+    
+def sort_bubble(listIn):
+    print("===== SORT BUBBLE =====")
+    
+
+
 input_list=[1,2,3,4,-7]
 
 average_above_zero(input_list)
 max_value(input_list)
 reverse_table(input_list)
 roi_bbox(myMat)
+remove_whitespace("Je ne sais pas quoi mettre dedans")
+shuffle(input_list)
+dice_game(3)
 
+print("------ FIN --------")
 
