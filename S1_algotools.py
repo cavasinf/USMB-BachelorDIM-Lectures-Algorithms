@@ -24,7 +24,8 @@ def average_above_zero(list):
     		print('This value is negative '+str(item))
     average = som/n
     print('Positive elements average is '+str(average))
-    
+    return average
+        
 def max_value(list):
     print("===== Max Value =====")
     
