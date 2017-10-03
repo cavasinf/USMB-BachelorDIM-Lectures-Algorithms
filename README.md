@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/cavasinf/USMB-BachelorDIM-Lectures-Algorithms/badge.svg?branch=master)](https://coveralls.io/github/cavasinf/USMB-BachelorDIM-Lectures-Algorithms?branch=master)
+
 # USMB-BachelorDIM-Lectures-Algorithms
 Short courses on algorithms : practical recommendations to build solid, energy efficient and maintainable programs
 
