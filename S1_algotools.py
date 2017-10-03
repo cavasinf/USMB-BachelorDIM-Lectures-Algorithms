@@ -34,6 +34,7 @@ def max_value(list):
         if item > maxValue:
             maxValue = item
     print('The max value of the list is '+str(maxValue))
+    return maxValue
     
 def reverse_table(inputList):
     
@@ -46,6 +47,7 @@ def reverse_table(inputList):
         list.remove(list[n])
         
         print(list)
+    return list
         
         
 size_rows=10
