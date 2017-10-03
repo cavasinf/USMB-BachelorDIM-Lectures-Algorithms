@@ -134,15 +134,17 @@ def sort_bubble(listIn):
     
 
 
-input_list=[1,3,9,4,-7]
+input_list=[1,0,3,9,4,-7]
 
 average_above_zero(input_list)
 max_value(input_list)
 reverse_table(input_list)
 roi_bbox(myMat)
+random_fill_sparse("Table",input_list)
 remove_whitespace("Je ne sais pas quoi mettre dedans")
 shuffle(input_list)
 dice_game(3)
-
+sort_selective(input_list)
+sort_bubble(input_list)
 print("------ FIN --------")
 
