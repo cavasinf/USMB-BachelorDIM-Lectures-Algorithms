@@ -10,7 +10,7 @@ input_list=[1,0,3,9,4,-7]
 
 #========== ZONE DE TESTS ============
 def test_average_above_zero():
-    assert algo.average_above_zero(input_list) == 4.25
+    assert algo.average_above_zero(input_list) == 4
     
 def test_max_value():
     assert algo.max_value(input_list) == 9
