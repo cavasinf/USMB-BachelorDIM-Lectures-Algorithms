@@ -37,7 +37,9 @@ def max_value(list):
     return maxValue
     
 def reverse_table(inputList):
-    
+    print("===== Reverse Table =====")
+    print(inputList)
+    print("became")
     list = inputList
     numberOfItem = len(list)
     
@@ -46,7 +48,7 @@ def reverse_table(inputList):
     for n in range(0,numberOfItem):
         list.remove(list[n])
         
-        print(list)
+    print(list)
     return list
         
         
@@ -128,12 +130,32 @@ def dice_game(numberOfPlayer):
     print ("The Player number "+str(playerWhoWin)+" win with "+str(scoreList[playerWhoWin-1])+" points")
     print(scoreList)
         
-def sort_selective(listIn):
+def sort_selective(inputList):
     print("=====SORT SELECTIVE =====")
+    alist = inputList
+    for fillslot in range(len(alist)-1,0,-1):
+       positionOfMax=0
+       for location in range(1,fillslot+1):
+           if alist[location]>alist[positionOfMax]:
+               positionOfMax = location
+
+       temp = alist[fillslot]
+       alist[fillslot] = alist[positionOfMax]
+       alist[positionOfMax] = temp
+    print(alist)
+            
+        
     
-def sort_bubble(listIn):
+def sort_bubble(inputList):
     print("===== SORT BUBBLE =====")
-    
+    alist = inputList
+    for passnum in range(len(alist)-1,0,-1):
+        for i in range(passnum):
+            if alist[i]>alist[i+1]:
+                temp = alist[i]
+                alist[i] = alist[i+1]
+                alist[i+1] = temp
+    print(alist)
 
 
 input_list=[1,0,3,9,4,-7]
